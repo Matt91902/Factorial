@@ -8,11 +8,14 @@ public class Factorial {
             System.out.println(calcFactorial(x));
         }
         calcE();
-        calcEX(4.0);
+        int m = 5;
+        for (double x = 1; x <= 5; x++){
+            calcEX(x);
+        }
     }
 
-    public static int calcFactorial(int n) {
-        int total = 1;
+    public static double calcFactorial(int n) {
+        double total = 1.0;
         for (int i = n; i >= 1; i--) {
             total = total * i;
         }
@@ -40,6 +43,6 @@ public class Factorial {
             eX = oldeX + (Math.pow(x,i) / calcFactorial(i));
             i++;
         }
-        System.out.printf("e^x is %2.3f \n", eX);
+        System.out.printf("e^" + x +" is %2.3f \n", eX);
     }
 }
